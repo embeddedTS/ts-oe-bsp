@@ -6,7 +6,7 @@
   <remote fetch="git://github.com/embeddedarm" name="ts"/>
   <remote fetch="git://github.com/meta-qt5/" name="qt5" />
 
-  <default remote="ts" revision="refs/heads/master" sync-j="4"/>
+  <project remote="ts" revision="daisy" name="meta-ts" path="sources/meta-ts"/>
 
   <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
   <project remote="yocto" revision="daisy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
