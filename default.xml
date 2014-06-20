@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/Freescale" name="freescale"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com/embeddedarm" name="ts"/>
+  <remote fetch="git://github.com/meta-qt5/" name="qt5" />
+
+  <default remote="embeddedarm" revision="refs/heads/master" sync-j="4"/>
+
+
+  <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="daisy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="daisy" name="meta-mono" path="sources/meta-mono" />
+
+  <project remote="oe" revision="daisy" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="daisy" name="openembedded-core" path="sources/openembedded-core"/>
+
+  <project remote="freescale" revision="daisy" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="freescale" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="daisy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+
+  <project remote="qt5" revision="daisy" name="meta-qt5" path="sources/meta-qt5" />
+  
+</manifest>
