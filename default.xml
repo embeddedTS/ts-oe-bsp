@@ -6,23 +6,23 @@
   <remote fetch="git://github.com/embeddedarm" name="ts"/>
   <remote fetch="git://github.com/meta-qt5/" name="qt5" />
 
-  <project remote="ts" revision="daisy" name="meta-ts" path="sources/meta-ts"/>
+  <project remote="ts" revision="dizzy" name="meta-ts" path="sources/meta-ts"/>
 
-  <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="daisy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="yocto" revision="daisy" name="meta-mono" path="sources/meta-mono" />
+  <project remote="yocto" revision="dizzy" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="dizzy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="dizzy" name="meta-mono" path="sources/meta-mono" />
 
-  <project remote="oe" revision="daisy" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="oe" revision="daisy" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="oe" revision="dizzy" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="dizzy" name="openembedded-core" path="sources/openembedded-core"/>
 
-  <project remote="freescale" revision="daisy" name="fsl-community-bsp-base" path="sources/base">
+  <project remote="freescale" revision="dizzy" name="fsl-community-bsp-base" path="sources/base">
 	<copyfile dest="README" src="README"/>
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="daisy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="dizzy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="dizzy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
-  <project remote="qt5" revision="daisy" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="qt5" revision="dizzy" name="meta-qt5" path="sources/meta-qt5" />
 
 </manifest>
