@@ -10,7 +10,7 @@
   <project remote="ts" revision="dizzy" name="meta-ts" path="sources/meta-ts"/>
 
   <project remote="yocto" revision="dizzy" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="HEAD" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
   <project remote="yocto" revision="master" name="meta-mono" path="sources/meta-mono" />
 
   <project remote="oe" revision="dizzy" name="meta-openembedded" path="sources/meta-openembedded"/>
@@ -25,6 +25,6 @@
   <project remote="freescale" revision="dizzy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <project remote="qt5" revision="dizzy" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="oss" revision="HEAD" name="meta-browser" path="sources/meta-browser" />
+  <project remote="oss" revision="master" name="meta-browser" path="sources/meta-browser" />
 
 </manifest>
