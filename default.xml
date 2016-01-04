@@ -9,8 +9,8 @@
 
   <project remote="ts" revision="fido" name="meta-ts" path="sources/meta-ts"/>
     <project remote="yocto" revision="fido" name="poky" path="sources/poky"/>
-    <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-    <project remote="yocto" revision="master" name="meta-mono" path="sources/meta-mono" />
+    <project remote="yocto" revision="fido" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+    <project remote="yocto" revision="fido" name="meta-mono" path="sources/meta-mono" />
 
     <project remote="oe" revision="fido" name="meta-openembedded" path="sources/meta-openembedded"/>
     <project remote="oe" revision="fido" name="openembedded-core" path="sources/openembedded-core"/>
@@ -24,6 +24,6 @@
   <project remote="freescale" revision="fido" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <project remote="qt5" revision="fido" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="oss" revision="master" name="meta-browser" path="sources/meta-browser" />
+  <project remote="oss" revision="fido" name="meta-browser" path="sources/meta-browser" />
 
 </manifest>
