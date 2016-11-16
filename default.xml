@@ -24,5 +24,5 @@
   <project remote="freescale" revision="jethro" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <project remote="qt5" revision="jethro" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="oss" revision="master" name="meta-browser" path="sources/meta-browser" />
+  <project remote="oss" revision="jethro" name="meta-browser" path="sources/meta-browser" />
 </manifest>
