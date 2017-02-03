@@ -17,6 +17,7 @@
   <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
+  <project remote="freescale" revision="morty" name="meta-freescale" path="sources/meta-freescale"/>
   <project remote="freescale" revision="morty" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" revision="morty" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
   <project remote="freescale" revision="morty" name="Documentation" path="sources/Documentation"/>
