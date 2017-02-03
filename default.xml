@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://github.com/Freescale" name="freescale"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="git://github.com/embeddedarm" name="ts"/>
-  <remote fetch="git://github.com/meta-qt5/" name="qt5" />
-  <remote fetch="git://github.com/OSSystems/" name="oss" />
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/embeddedarm" name="ts"/>
+  <remote fetch="https://github.com/meta-qt5/" name="qt5" />
+  <remote fetch="https://github.com/OSSystems/" name="oss" />
 
-  <project remote="ts" revision="krogoth" name="meta-ts" path="sources/meta-ts"/>
-    <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
-    <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="ts" revision="morty" name="meta-ts" path="sources/meta-ts"/>
 
-    <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
-    <project remote="oe" revision="krogoth" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="yocto" revision="morty" name="poky" path="sources/poky"/>
+  <project remote="oe" revision="morty" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-    <project remote="freescale" revision="krogoth" name="fsl-community-bsp-base" path="sources/base">
-  	<copyfile dest="README" src="README"/>
-  	<copyfile dest="setup-environment" src="setup-environment"/>
+  <project remote="freescale" revision="morty" name="fsl-community-bsp-base" path="sources/base">
+  <linkfile dest="README" src="README"/>
+  <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="krogoth" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="krogoth" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="morty" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="morty" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="morty" name="Documentation" path="sources/Documentation"/>
 
-  <project remote="qt5" revision="krogoth" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="oss" revision="b251177608a8be789fe71f35e27558436ff46f50" name="meta-browser" path="sources/meta-browser" />
+  <project remote="qt5" revision="morty" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="oss" revision="morty" name="meta-browser" path="sources/meta-browser" />
 </manifest>
