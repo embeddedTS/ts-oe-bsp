@@ -11,7 +11,7 @@ $: export PATH=${PATH}:~/bin
 Step 2: Checkout source
 $: mkdir ts-bsp
 $: cd ts-bsp
-$: repo init -u https://github.com/embeddedarm.com/ts-oe-bsp -b dizzy
+$: repo init -u https://github.com/embeddedarm/ts-oe-bsp -b dizzy
 $: repo sync
 
 Step 3: Build
