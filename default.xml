@@ -23,5 +23,5 @@
   <project remote="freescale" revision="pyro" name="Documentation" path="sources/Documentation"/>
 
   <project remote="qt5" revision="pyro" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="oss" revision="pyro" name="meta-browser" path="sources/meta-browser" />
+  <!-- Not yet supported in pyro <project remote="oss" revision="pyro" name="meta-browser" path="sources/meta-browser" /-->
 </manifest>
