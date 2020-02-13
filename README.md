@@ -15,7 +15,7 @@ Step 2: Checkout Yocto
 ```bash
 mkdir ts-bsp
 cd ts-bsp
-repo init -u https://github.com/embeddedarm/ts-oe-bsp -b morty
+repo init -u https://github.com/embeddedarm/ts-oe-bsp.git -b zeus
 repo sync
 ```
 
@@ -23,49 +23,38 @@ Step 3: Set Build Env
 
 ```bash
 export MACHINE="tsimx6"
-export DISTRO="poky"
-source ./setup-environment build
+source sources/poky/oe-init-build-env 
 ```
 
 Step 4: Set bitbake layers (conf/bblayers.conf)
 ```
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
 POKY_BBLAYERS_CONF_VERSION = "2"
 
 BBPATH = "${TOPDIR}"
 BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
 
 BBFILES ?= ""
-BBLAYERS = " \
+
+BBLAYERS ?= " \
   ${BSPDIR}/sources/poky/meta \
   ${BSPDIR}/sources/poky/meta-poky \
-  \
-  ${BSPDIR}/sources/meta-openembedded/meta-oe \
-  ${BSPDIR}/sources/meta-openembedded/meta-multimedia \
-  ${BSPDIR}/sources/meta-openembedded/meta-networking \
-  ${BSPDIR}/sources/meta-openembedded/meta-python \
-  ${BSPDIR}/sources/meta-openembedded/meta-gnome \
-  \
+  ${BSPDIR}/sources/poky/meta-yocto-bsp \
   ${BSPDIR}/sources/meta-freescale \
   ${BSPDIR}/sources/meta-freescale-3rdparty \
   ${BSPDIR}/sources/meta-freescale-distro \
-  \
+  ${BSPDIR}/sources/meta-openembedded/meta-oe \
+  ${BSPDIR}/sources/meta-openembedded/meta-python \
+  ${BSPDIR}/sources/meta-openembedded/meta-multimedia \
+  ${BSPDIR}/sources/meta-openembedded/meta-gnome \
+  ${BSPDIR}/sources/meta-openembedded/meta-networking \
   ${BSPDIR}/sources/meta-ts \
   ${BSPDIR}/sources/meta-qt5 \
-  ${BSPDIR}/sources/meta-browser \
-"
+  "
 ```
 
-Step 5 (Optional): Set additional conf/local.conf options:
-```
-LICENSE_FLAGS_WHITELIST = "commercial_libav commercial"
-DISTRO_FEATURES_remove = "wayland "
-DISTRO_FEATURES_append = " x11 systemd"
-DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = ""
-```
-
-Step 6: Download/Compile image:
+Step 5: Download/Compile image:
 
 ```bash
 bitbake ts-x11-image
