@@ -3,7 +3,7 @@
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://github.com/embeddedarm" name="ts"/>
+  <remote fetch="https://github.com/embeddedTS" name="ts"/>
   <remote fetch="https://github.com/meta-qt5/" name="qt5" />
   <remote fetch="https://github.com/OSSystems/" name="oss" />
 
