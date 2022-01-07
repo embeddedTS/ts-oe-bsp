@@ -15,7 +15,7 @@ Step 2: Checkout Yocto
 ```bash
 mkdir ts-bsp
 cd ts-bsp
-repo init -u https://github.com/embeddedarm/ts-oe-bsp.git -b zeus
+repo init -u https://github.com/embeddedTS/ts-oe-bsp.git -b zeus
 repo sync
 ```
 
