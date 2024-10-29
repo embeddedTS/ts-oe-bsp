@@ -1,0 +1,9 @@
+header:
+  version: 17
+repos:
+  meta-ts:
+    url: "https://github.com/embeddedTS/meta-ts"
+    branch: scarthgap
+    path: layers/meta-ts
+    layers:
+      .:

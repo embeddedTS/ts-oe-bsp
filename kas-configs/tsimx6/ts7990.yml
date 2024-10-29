@@ -1,0 +1,11 @@
+# Includes the base poky layers, meta-oe, and meta-ts layers for building images
+# for embeddedTS platforms.
+header:
+  version: 17
+  includes:
+    - kas-includes/poky-distro.yml # Change this to use a different distro
+    - kas-includes/target-graphical-and-cmdline.yml # Specifies multiple targets
+    - kas-includes/poky-base.yml
+    - kas-includes/meta-oe.yml
+    - kas-includes/meta-ts.yml
+machine: ts7990

@@ -1,0 +1,9 @@
+header:
+  version: 17
+repos:
+  meta-oe:
+    url: "https://github.com/openembedded/meta-openembedded"
+    branch: scarthgap
+    path: layers/meta-oe
+    layers:
+      meta-oe:

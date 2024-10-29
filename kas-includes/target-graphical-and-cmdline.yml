@@ -1,0 +1,5 @@
+header:
+  version: 17
+target:
+  - core-image-full-cmdline-ts
+  - core-image-weston-ts

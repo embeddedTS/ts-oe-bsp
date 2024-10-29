@@ -1,0 +1,11 @@
+header:
+  version: 17
+repos:
+  poky:
+    url: "https://git.yoctoproject.org/git/poky"
+    branch: scarthgap
+    path: layers/poky
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
