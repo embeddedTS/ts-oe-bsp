@@ -1,0 +1,125 @@
+header:
+  version: 17
+machine: ts9370
+distro: fsl-imx-wayland
+
+repos:
+  meta-ts:
+    branch: scarthgap-ts93xx-support
+    commit: 445827880572bef10339505b031bf9696678b85a
+    path: layers/meta-ts
+    url: "https://github.com/embeddedts/meta-ts"
+
+  meta-arm:
+    branch: scarthgap
+    commit: 950a4afce46a359def2958bd9ae33fc08ff9bb0d
+    layers:
+      meta-arm:
+      meta-arm-toolchain:
+    path: layers/meta-arm
+    url: "https://git.yoctoproject.org/git/meta-arm"
+
+  meta-clang:
+    branch: scarthgap
+    commit: 2b7433611d80f6d0ee1b04156fa91fc73d3c2665
+    path: layers/meta-clang
+    url: "https://github.com/kraj/meta-clang"
+
+  meta-freescale:
+    branch: scarthgap
+    commit: 0627128b341cfb2bef7a0832ce8cac0ce1127f13
+    path: layers/meta-freescale
+    url: "https://github.com/Freescale/meta-freescale"
+
+  meta-freescale-3rdparty:
+    branch: scarthgap
+    commit: 6c063450d464eb2f380443c7d9af1b94ce9b9d75
+    path: layers/meta-freescale-3rdparty
+    url: "https://github.com/Freescale/meta-freescale-3rdparty"
+
+  meta-freescale-distro:
+    branch: scarthgap
+    commit: b9d6a5d9931922558046d230c1f5f4ef6ee72345
+    path: layers/meta-freescale-distro
+    url: "https://github.com/Freescale/meta-freescale-distro"
+
+  meta-imx:
+    tag: rel_imx_6.6.52_2.2.0
+    commit: "219f6d04a4c339eb6f2dc626f944bbdf9a716ff5"
+    layers:
+      meta-imx-bsp:
+      meta-imx-sdk:
+      meta-imx-ml:
+      meta-imx-v2x:
+    path: layers/meta-imx
+    url: "https://github.com/nxp-imx/meta-imx"
+
+  meta-nxp-connectivity:
+    tag: rel_imx_6.6.52_2.2.0
+    commit: "f58365ec75a5768ff3e8e8bcd64f237738c93160"
+    layers:
+      meta-nxp-matter-baseline:
+      meta-nxp-openthread:
+    path: layers/meta-nxp-connectivity
+    url: "https://github.com/nxp-imx/meta-nxp-connectivity"
+
+  meta-nxp-demo-experience:
+    tag: rel_imx_6.6.52_2.2.0
+    commit: "e8e646e22b1f926aac83bb7ad522efa9cd8ccc45"
+    path: layers/meta-nxp-demo-experience
+    url: "https://github.com/nxp-imx-support/meta-nxp-demo-experience"
+
+  meta-openembedded:
+    branch: scarthgap
+    commit: 72018ca1b1a471226917e8246e8bbf9a374ccf97
+    layers:
+      meta-oe:
+      meta-multimedia:
+      meta-networking:
+      meta-python:
+      meta-filesystems:
+    path: layers/meta-openembedded
+    url: "https://github.com/openembedded/meta-openembedded"
+
+  meta-qt6:
+    branch: "6.8"
+    commit: 586a6cb5aec755803a3be3cec359baafe89d6432
+    path: layers/meta-qt6
+    url: "https://github.com/YoeDistro/meta-qt6"
+
+  meta-security:
+    branch: scarthgap
+    commit: 459d837338ca230254baa2994f870bf6eb9d0139
+    path: layers/meta-security
+    url: "https://git.yoctoproject.org/meta-security"
+
+  meta-virtualization:
+    branch: scarthgap
+    commit: 6f3c1d8f90947408a6587be222fec575a1ca5195
+    path: layers/meta-virtualization
+    url: "https://git.yoctoproject.org/meta-virtualization"
+
+  poky:
+    branch: scarthgap
+    commit: 200d12b6a58ad961d60a7774ca0f7a9d29498724
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+    path: layers/poky
+    url: "https://git.yoctoproject.org/git/poky"
+
+target:
+  - core-image-minimal
+  - core-image-base
+  - imx-image-core
+
+local_conf_header:
+  custom-local-conf: |
+    ACCEPT_FSL_EULA = "1"
+    BB_NUMBER_THREADS = "64"
+    PARALLEL_MAKE = "-j 128"
+    PACKAGE_CLASSES = "package_deb"
+    EXTRA_IMAGE_FEATURES += "package-management"
+    # Added just for development
+    EXTRA_IMAGE_FEATURES += "allow-empty-password allow-root-login empty-root-password"
