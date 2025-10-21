@@ -3,7 +3,7 @@ header:
 repos:
   poky:
     url: "https://git.yoctoproject.org/git/poky"
-    branch: scarthgap
+    branch: walnascar
     path: layers/poky
     layers:
       meta:

@@ -3,7 +3,7 @@ header:
 repos:
   meta-oe:
     url: "https://github.com/openembedded/meta-openembedded"
-    branch: scarthgap
+    branch: walnascar
     path: layers/meta-oe
     layers:
       meta-oe:
