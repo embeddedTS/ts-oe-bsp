@@ -8,4 +8,5 @@ header:
     - kas-includes/poky-base.yml
     - kas-includes/meta-oe.yml
     - kas-includes/meta-ts.yml
+    - kas-includes/allow-development-logins.yml
 machine: ts7250v3

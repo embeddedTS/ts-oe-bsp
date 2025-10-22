@@ -1,4 +1,4 @@
 header:
   version: 17
 target:
-  - core-image-weston-ts
+  - core-image-weston

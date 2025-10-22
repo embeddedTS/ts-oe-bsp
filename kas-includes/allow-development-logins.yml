@@ -1,0 +1,5 @@
+header:
+  version: 17
+local_conf_header:
+  custom-local-conf: |
+    EXTRA_IMAGE_FEATURES += "allow-empty-password allow-root-login empty-root-password"
