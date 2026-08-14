@@ -1,0 +1,5 @@
+header:
+  version: 17
+local_conf_header:
+  base: |
+    INIT_MANAGER = "systemd"

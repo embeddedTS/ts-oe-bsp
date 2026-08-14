@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ### Build
 ```
-kas build kas-configurations/<series>/<model>.yml
+kas build kas-configs/<series>/<model>.yml
 ```
 
 ### Using Generated Images
@@ -32,4 +32,16 @@ A number of images may be generated from any specific configuration file. Usuall
 These images are output to `build/tmp/deploy/images/<model>/` and can be loaded on to the target using the instructions from that device's manual.
 
 ### Building an External Toolchain
-It is also possible to build a toolchain, DOCUMENT THIS
+It is also possible to build a toolchain.  To build the toolchain:
+```
+kas build kas-configs/<series>/<model>.yml -- -c populate_sdk
+```
+This will build the toolchain install script in `build/tmp/deploy/sdk/poky-glibc-x86_64-<image>-<arch>-<model>-toolchain-<version>.sh`
+
+Executing this script installs the toolchain into `/opt/poky/<version>`.  To use it to build, first `source /opt/poky/<version>/environment-setup-<arch>-poky-linux-gnueabi` then run make,cmake, meson, etc.  It will build arm binaries using same compiler and libraries used in the yocto image, binaries can be copied over to the eTS board.
+
+### Building with systemd
+To build an image using systemd instead of sysvinit, apply the systemd.yml override:
+```
+kas build kas-configs/<series>/<model>.yml:kas-includes/systemd.yml
+```
