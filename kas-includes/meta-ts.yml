@@ -3,7 +3,7 @@ header:
 repos:
   meta-ts:
     url: "https://github.com/embeddedTS/meta-ts"
-    branch: wrynose
+    branch: main
     path: layers/meta-ts
     layers:
       .:
